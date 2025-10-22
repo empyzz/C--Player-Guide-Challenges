@@ -1,0 +1,44 @@
+
+bin/
+obj/
+out/
+Debug/
+Release/
+
+.vs/
+.idea/
+.vscode/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+*.log
+*.pidb
+*.tmp
+*.cache
+*.pdb
+
+# NuGet packages
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+# Other tools
+*.dbmdl
+*.bak
+*.orig
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# If using dotnet
+# (this ensures local dependency cache isn't tracked)
+project.lock.json
+project.fragment.lock.json
+artifacts/

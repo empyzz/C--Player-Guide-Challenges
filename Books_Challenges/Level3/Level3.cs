@@ -1,11 +1,15 @@
 using System;
 
-namespace Book_Challenges.Level1
+
+namespace F.Books_Challenges.Level3
 {
-    public class Level1Challenge
+    public class Level3Challenge : ILevel
     {
-        public static void Run()
+        public int Number => 3;
+
+        public void Run() 
         {
+            Console.WriteLine("Level 3 Challenge Running...");
             Console.WriteLine("Hello World!");
             Console.WriteLine("1");
             Console.WriteLine("2");
@@ -14,14 +18,12 @@ namespace Book_Challenges.Level1
 
             Console.WriteLine("Bread is Ready");
             Console.WriteLine("Who is the bread for?");
-            string x = Console.ReadLine();
+            Console.WriteLine(">>>");
+            string x  = Console.ReadLine();
             Console.WriteLine($"Noted: {x} got bread"); 
         }
     }
 }
-
-
-
 
 
 /* 

@@ -1,11 +1,15 @@
 using System;
 
-namespace Book_Challenges.Level4
+namespace F.Books_Challenges.Level4
 {
-    public class Level4Challenge
+    public class Level4Challenge : ILevel
     {
-        public static void Run()
+        public int Number => 4;
+
+        public void Run()
         {
+            Console.WriteLine("Level 4 Challenge Running...");
+
             Console.WriteLine("What kind of thing are we talking about?");
             string Thing = Console.ReadLine(); // The object that we are talking about
             Console.WriteLine("How would you describe it? Big? Azure? Tattered?");

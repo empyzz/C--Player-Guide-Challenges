@@ -1,11 +1,15 @@
 using System;
 
-namespace Book_Challenges.Level6
+namespace F.Books_Challenges.Level6
 {
-    public class Level6Challenge
+    public class Level6Challenge : ILevel
     {
-        public static void Run()
+        
+        public int Number => 6;
+
+        public void Run()
         {
+        Console.WriteLine("Level 6 Challenge Running...");
 
         byte a = 25;
         short b = -1500;

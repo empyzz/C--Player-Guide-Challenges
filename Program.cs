@@ -1,24 +1,35 @@
 ﻿using System;
-using Book_Challenges;
+using System.Reflection;
+using F.Books_Challenges;
 
-class Program
+namespace F
 {
-		static void Main()
-		{
-				Console.WriteLine("Starting...");
-				Console.WriteLine("Choose a Level to run.");
-				var choice = Console.ReadLine();
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Starting...");
+            Console.WriteLine("Choose a Level to run:");
 
-				switch (choice)
-				{
-						case "1":
-								Book_Challenges.Level1.Level1Challenge.Run();
-								break;
-						default:
-								Console.WriteLine("Invalid");
-								break;
-				}
-				
-		}
+            var levels = Assembly.GetExecutingAssembly()
+                .GetTypes()
+                .Where(t => typeof(ILevel).IsAssignableFrom(t) && !t.IsInterface && !t.IsAbstract)
+                .Select(t => (ILevel)Activator.CreateInstance(t)!)
+                .ToDictionary(l => l.Number);
+
+            foreach (var number in levels.Keys.OrderBy(n => n))
+                Console.WriteLine($"Level {number}");
+
+            if (int.TryParse(Console.ReadLine(), out int choice) &&
+                levels.TryGetValue(choice, out var selected))
+            {
+                Console.WriteLine($"Running Level {choice}...\n\n\n\n");
+                selected.Run();
+            }
+            else
+            {
+                Console.WriteLine("Invalid level number.");
+            }
+        }
+    }
 }
-

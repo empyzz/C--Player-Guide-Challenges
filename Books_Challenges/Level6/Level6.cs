@@ -1,5 +1,3 @@
-using System;
-
 namespace F.Books_Challenges.Level6
 {
     public class Level6Challenge : ILevel
@@ -74,6 +72,7 @@ namespace F.Books_Challenges.Level6
         Console.WriteLine($"string: {m}");
         Console.WriteLine($"bool: {n}");
 
+        Program.WaitForKeyAndReturnToMenu();
         }
     }
 }

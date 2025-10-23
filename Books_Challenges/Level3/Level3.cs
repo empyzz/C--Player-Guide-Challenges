@@ -19,8 +19,11 @@ namespace F.Books_Challenges.Level3
             Console.WriteLine("Bread is Ready");
             Console.WriteLine("Who is the bread for?");
             Console.WriteLine(">>>");
-            string x  = Console.ReadLine();
+            string? x  = Console.ReadLine();
             Console.WriteLine($"Noted: {x} got bread"); 
+
+            Program.WaitForKeyAndReturnToMenu();
+
         }
     }
 }

@@ -1,14 +1,14 @@
-﻿using System;
-using System.Reflection;
+﻿global using System;
+global using System.Reflection;
 using F.Books_Challenges;
 
 namespace F
 {
     class Program
     {
-        static void Main()
+        public static void Main()
         {
-            Console.WriteLine("Starting...");
+            Console.Clear();
             Console.WriteLine("Choose a Level to run:");
 
             var levels = Assembly.GetExecutingAssembly()
@@ -25,11 +25,19 @@ namespace F
             {
                 Console.WriteLine($"Running Level {choice}...\n\n\n\n");
                 selected.Run();
+                Console.Clear();
             }
             else
             {
                 Console.WriteLine("Invalid level number.");
             }
+        }
+
+        public static void WaitForKeyAndReturnToMenu()
+        {
+            Console.WriteLine("Press any key to return to the main menu...");
+            Console.ReadKey();
+            Main();
         }
     }
 }

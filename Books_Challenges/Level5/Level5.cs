@@ -24,6 +24,8 @@ namespace F.Books_Challenges.Level5
             Console.WriteLine($"f: Type = {f.GetType()}, Value = {f}");
             Console.WriteLine($"d: Type = {d.GetType()}, Value = {d}");
             Console.WriteLine($"z: Type = {z.GetType()}, Value = {z}");
+
+            Program.WaitForKeyAndReturnToMenu();
         }
     }
 }

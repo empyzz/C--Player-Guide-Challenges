@@ -7,7 +7,7 @@ namespace F.Books_Challenges.Level3
     {
         public int Number => 3;
 
-        public void Run() 
+        public void Run()
         {
             Console.WriteLine("Level 3 Challenge Running...");
             Console.WriteLine("Hello World!");
@@ -19,8 +19,8 @@ namespace F.Books_Challenges.Level3
             Console.WriteLine("Bread is Ready");
             Console.WriteLine("Who is the bread for?");
             Console.WriteLine(">>>");
-            string? x  = Console.ReadLine();
-            Console.WriteLine($"Noted: {x} got bread"); 
+            string? x = Console.ReadLine();
+            Console.WriteLine($"Noted: {x} got bread");
 
             Program.WaitForKeyAndReturnToMenu();
 
@@ -32,10 +32,11 @@ namespace F.Books_Challenges.Level3
 /* 
 using System;
 
-namespace Book_Challenges.Level$
+namespace F.Books_Challenges.Level$
 {
-    public class Level$Challenge
+    public class Level$Challenge : ILevel
     {
+        public int Number => $;
         public static void Run()
         {
         }
